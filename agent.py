@@ -98,5 +98,6 @@ if __name__ == '__main__':#从这里开始，什么作用？
     tool_executor.registerTool("Search", search_desc, search)
     tool_executor.registerTool("AddTodo", "添加一条待办事项，参数是待办内容。", add_todo)
     agent = ReActAgent(llm_client=llm, tool_executor=tool_executor)
-    question = "帮我添加一条待办：周五前交软工作业"
+    question = "图书馆几点关门"
     agent.run(question)
+    
