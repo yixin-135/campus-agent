@@ -94,7 +94,7 @@ class ReActAgent:
 if __name__ == '__main__':#从这里开始，什么作用？
     llm = HelloAgentsLLM()
     tool_executor = ToolExecutor()
-    search_desc = "一个网页搜索引擎。当你需要回答关于时事、事实以及在你的知识库中找不到的信息时，应使用此工具。"
+    search_desc = "北交大校园信息查询工具：只查内置的、带来源的校园知识库。问校园卡、食堂、浴室、图书馆、选课、VPN、奖学金、宿舍等校园问题时使用。"
     tool_executor.registerTool("Search", search_desc, search)
     tool_executor.registerTool("AddTodo", "添加一条待办事项，参数是待办内容。", add_todo)
     agent = ReActAgent(llm_client=llm, tool_executor=tool_executor)
